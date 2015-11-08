@@ -139,7 +139,7 @@ module Redd
       #   found.
       def get_flair(user)
         username = client.property(user, :name)
-        flair = get_flairlist(user: username).first
+        flair = get_flairlist(name: username).first
         flair if flair[:user].casecmp(username) == 0
       end
 
